@@ -1,0 +1,48 @@
+{
+	"options":
+		[
+			{
+				"title": "Christian",
+				"shortname": "christian",
+				"id": 1,
+				"holidays": [
+					"Christmas",
+					"Easter",
+					"Good Friday"
+				]
+			},
+			{
+				"title": "Muslim",
+				"shortname": "muslim",
+				"id": 2,
+				"holidays": [
+					"Ramadan"
+				]
+			},
+			{
+				"title": "Jewish",
+				"shortname": "jewish",
+				"id": 3,
+				"holidays": [
+					"Sabbath",
+					"Chanukah"
+				]
+			},
+			{
+				"title": "Buddhist",
+				"shortname": "buddhist",
+				"id": 4,
+				"holidays": [
+
+				]
+			},
+			{
+				"title": "Hindu",
+				"shortname": "hindu",
+				"id": 5,
+				"holidays": [
+
+				]
+			}
+		]
+}
