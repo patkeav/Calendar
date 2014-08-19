@@ -29,14 +29,14 @@
 							and I am:
 						</span>
 						<div class="options-list" ng-controller="optionsListController">
-								<span class="input-group-addon" ng-repeat="option in options"  >
-									<input type="checkbox" 
-										class="options-checkbox"
-										name="{{option.shortname}}" 
-										ng-model="identity"
-										ng-change="swapValue('{{option.title}}')" />
-										 {{option.title}}
-								</span>
+							<span class="input-group-addon" ng-repeat="option in options"  >
+								<input type="checkbox" 
+									class="options-checkbox"
+									name="{{option.shortname}}" 
+									ng-model="identity"
+									ng-change="swapValue('{{option}}')" />
+									 {{option.title}}
+							</span>
 						</div><!--/.options-list-->
 					</div><!--/.input-group-->
 				</div><!--/#content.col-lg-6-->
@@ -46,7 +46,10 @@
 					<div id="name-controller" class="user-name" ng-controller="identityListController" >
 						<h1>{{ name }}'s Calendar for 2014</h1>
 						<h2> You are 
-							<span ng-repeat="thing in identityList">{{ thing }}, </span>
+							<span ng-repeat="thing in identityList">{{ thing.title }}, </span>
+						</h2>
+						<h2> and you the following holidays:
+							<span ng-repeat="thing in identityList">{{ thing.holidays }}, </span>
 						</h2>
 					</div><!--/#name-controller-->
 				</div><!--/.col-lg-12-->

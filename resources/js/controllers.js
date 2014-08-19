@@ -20,14 +20,19 @@ controllers.controller('optionsListController', function($scope, $http, $window)
 	//	$scope.options = response.data;
 	});
 	$scope.swapValue = function(value) {
-		if ($window.identityList.indexOf(value) >= 0) {
+		if (value in $window.identityList) {
 			console.log("List [" + $window.identityList + "] contains " + value);
 			var index = $window.identityList.indexOf(value);
 			$window.identityList.splice(index, 1);
 		}
 		else {
 			console.log("List [" + $window.identityList + "] does not contain " + value);
-			$window.identityList.push(value);
+			$window.identityList.push({
+				title: value.title,
+				shortname: value.shortname,
+				id: value.id,
+				holidays: value.holidays,
+			});
 		}
 	}
 });
@@ -35,6 +40,7 @@ controllers.controller('optionsListController', function($scope, $http, $window)
 // controller for loading the json data
 controllers.controller('identityListController', function($scope, $window) {
 	$scope.identityList = $window.identityList;
+	console.log("Scope: " + $scope.identityList + " Window: " + $window.identityList);
 	return $scope.identityList; 
 });
 
